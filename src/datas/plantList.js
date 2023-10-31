@@ -1,3 +1,5 @@
+//  Toute mes données de plantes
+
 export const plantList = [
 	{
 		name: 'monstera',
@@ -19,7 +21,8 @@ export const plantList = [
 		category: 'classique',
 		id: '3sd',
 		light: 1,
-		water: 2
+		water: 2,
+    isSpecialOffer: true
 	},
 	{
 		name: 'yucca',
@@ -48,14 +51,16 @@ export const plantList = [
 		id: '7ie',
 		isBestSale: true,
 		light: 2,
-		water: 3
+		water: 3,
+    isSpecialOffer: true
 	},
 	{
 		name: 'aloe',
 		category: 'plante grasse',
 		id: '8fp',
 		light: 2,
-		water: 1
+		water: 1,
+    isSpecialOffer: true
 	},
 	{
 		name: 'succulente',
