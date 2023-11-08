@@ -10,10 +10,14 @@ import '../styles/Layout.css'
 // Le composant App est appelé dans l'index.html
 function App() {
   const savedCart = localStorage.getItem('cart')
+
   const [cart, updateCart] = useState(savedCart ? JSON.parse(savedCart) : [])
+
   useEffect(() => {
-    localStorage.setItem('cart', JSON.stringify(cart))
-  }, [cart])
+  localStorage.setItem(JSON.stringify(cart))
+}
+, [cart])
+
 
 	return (
 		<div>
