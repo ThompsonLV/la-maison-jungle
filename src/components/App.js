@@ -2,6 +2,7 @@
 import Banner from './Banner'
 import logo from '../assets/logo.png'
 // import Cart from './Cart'
+import Footer from './Footer'
 import ShoppingList from './ShoppingList'
 
 // * Le composant App est appelé dans l'index.html
@@ -15,6 +16,8 @@ function App() {
 			</Banner>
 			{/* <Cart /> */}
 			<ShoppingList />
+      <Footer />
+
 		</div>
 	)
 }
