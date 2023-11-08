@@ -11,7 +11,8 @@ function ShoppingList({ cart, updateCart }) {
   // La fonction reduce() permet de combiner les éléments d'un tableau en une unique valeur
   // Ici plantList est le tableau d'objets que je veux itérer
   // Ma fonction prend comme argument acc et plant. acc commence par un tableau vide et plant est un objet de ma liste plantList
-	const [activeCategory, setActiveCategory] = useState('')
+  const [activeCategory, setActiveCategory] = useState('')
+
   const categories = plantList.reduce(
 		(acc, plant) =>
 			acc.includes(plant.category) ? acc : acc.concat(plant.category),
