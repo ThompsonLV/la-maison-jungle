@@ -34,6 +34,26 @@ function ShoppingList({ cart, updateCart }) {
     }
   }
 
+  function removeToCart(name, price) {
+    // je dois voir si l'élement est déjà dans le panier
+    const currentPlantSaved = cart.find((plant) => plant.name === name)
+    // S'il est dans le panier, je le supprime
+    const cartFilteredCurrentPlant = cart.filter(
+      (plant) => plant.name !== name
+      )
+    if (currentPlantSaved && currentPlantSaved.amount > 1)  {
+        updateCart([
+          ...cartFilteredCurrentPlant,
+          { name, price, amount: currentPlantSaved.amount - 1 }
+        ])
+    } else {
+      // Je supprime mon élément de mon cart
+        updateCart([
+          ...cartFilteredCurrentPlant,
+        ])
+    }
+  }
+
 
   return (
 		<div className='lmj-shopping-list'>
@@ -49,6 +69,7 @@ function ShoppingList({ cart, updateCart }) {
             <div key = {id}>
               <PlantItem cover = {cover} name = {name} water = {water} light = {light} price = {price} />
               <button onClick={() => addToCart(name, price)}>Ajouter</button>
+              <button onClick={() => removeToCart(name, price)}>Retirer</button>
             </div>
           ) : null
 				))}

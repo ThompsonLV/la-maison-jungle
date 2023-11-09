@@ -6,12 +6,13 @@ function handleClick(plantName) {
   alert(`Vous voulez acheter 1 ${plantName} ? Très bon choix 🌱✨`)
 }
 
-function PlantItem({ name, cover, id, light, water }) {
+function PlantItem({ name, cover, id, light, water, price }) {
   return (
     <li className='lmj-plant-item' onClick={() => handleClick(name)}>
       <img className='lmj-plant-item-cover' src={cover} alt={`${name} cover`} />
       {name}
       <div>
+        <div>{price}€</div>
         {/* scaleValue et careType sont des props que l'on va récuperer dans notre composant CareScale (cf. /CareScale.js) */}
         {/* scaleValue prends une valeur entre 1 et 3 (cf. data dans /plantList.js) */}
         {/* CareScale est l'enfant de ShoppingList */}
