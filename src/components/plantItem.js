@@ -8,8 +8,8 @@ function handleClick(plantName) {
 
 function PlantItem({ name, cover, id, light, water, price }) {
   return (
-    <li className='lmj-plant-item' onClick={() => handleClick(name)}>
-      <img className='lmj-plant-item-cover' src={cover} alt={`${name} cover`} />
+    <li className='lmj-plant-item' >
+      <img className='lmj-plant-item-cover' src={cover} alt={`${name} cover`} onClick={() => handleClick(name)}/>
       {name}
       <div>
         <div>{price}€</div>
